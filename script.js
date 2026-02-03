@@ -1,87 +1,79 @@
-let clickCount = 0;
+document.addEventListener("DOMContentLoaded", () => {
 
-const btn = document.getElementById("ctaBtn");
-const modal = document.getElementById("rewardModal");
+  /* =====================
+     TOMBOL DOWNLOAD
+  ===================== */
+  let clickCount = 0;
+  const btn = document.getElementById("ctaBtn");
+  const modal = document.getElementById("rewardModal");
 
-/* =====================
-   TOMBOL DOWNLOAD SEKARANG
-===================== */
-btn.addEventListener("click", () => {
-  clickCount++;
+  if (btn) {
+    btn.addEventListener("click", () => {
+      clickCount++;
 
-  // Klik pertama → link new tab
-  if (clickCount === 1) {
-    window.open("https://s.shopee.co.id/3B1fet28qi", "_blank");
+      if (clickCount === 1) {
+        window.open("https://s.shopee.co.id/3B1fet28qi", "_blank");
+      } else {
+        modal.classList.add("active");
+        playSuccessCheck();
+      }
+    });
   }
 
-  // Klik kedua → buka modal
-  else if (clickCount === 2) {
-  modal.classList.add("active");
-  playConfetti();
-  playSuccessCheck();
-}
-
-
-/* =====================
-   TOMBOL CEK SALDO
-===================== */
-function goCek() {
-  window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");
-}
-
-
-
-/* =====================
-   LIVE PEMBAYARAN REAL-TIME
-===================== */
-document.addEventListener("DOMContentLoaded", () => {
+  /* =====================
+     LIVE PEMBAYARAN
+  ===================== */
   const track = document.getElementById("liveTrack");
-
   if (!track) return;
 
-  const names = [
-    "Budi***","Andi***","Rina***","Siti***","Dewi***","Ayu***","Putri***",
-    "Agus***","Rizki***","Fajar***","Yudi***","Hendra***","Wahyu***",
-    "Dimas***","Bayu***","Rendi***","Farhan***","Ilham***","Nanda***",
-    "Indra***","Arif***","Doni***","Rio***","Kevin***","Alif***"
+  /* VARIASI NAMA SUPER BANYAK */
+  const baseNames = [
+    "Andi","Budi","Rina","Siti","Dewi","Ayu","Putri","Rizki","Fajar",
+    "Agus","Yudi","Bayu","Dimas","Arif","Doni","Rio","Kevin","Alif",
+    "Nanda","Indra","Ilham","Farhan","Hendra","Wahyu","Eko","Rendi",
+    "Bagas","Iqbal","Akbar","Reza","Yoga","Surya","Bima","Rafi",
+    "Hafiz","Fikri","Ridho","Faiz","Zaki","Salman","Aziz",
+    "Maya","Intan","Nabila","Aulia","Nisa","Amelia","Citra",
+    "Lestari","Anisa","Rahma","Safira","Zahra","Nadya",
+    "Aisyah","Fatin","Sheila","Aurel","Keisha","Kayla",
+    "Wulan","Ratna","Melati","Novi"
   ];
 
-  const times = [
-    "Baru saja","30 Detik lalu","1 Menit lalu",
-    "2 Menit lalu","3 Menit lalu","5 Menit lalu"
-  ];
+  function randomName() {
+    const name = baseNames[Math.floor(Math.random() * baseNames.length)];
+    const initial = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    return `${name} ${initial}***`;
+  }
 
   function randomAmount() {
-    const min = 50000;
-    const max = 650000;
-    return "Rp" + Math.floor(Math.random() * (max - min) + min)
+    return "Rp" + (Math.floor(Math.random() * 600000) + 50000)
       .toLocaleString("id-ID");
   }
 
-  function randomAvatar() {
-    return `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}`;
+  function randomTime() {
+    const times = [
+      "Baru saja","10 Detik lalu","30 Detik lalu",
+      "1 Menit lalu","2 Menit lalu","3 Menit lalu"
+    ];
+    return times[Math.floor(Math.random() * times.length)];
   }
 
   function createLiveItem() {
     const item = document.createElement("div");
     item.className = "live-item";
-
     item.innerHTML = `
-      <img src="${randomAvatar()}">
       <div class="live-info">
-        <strong>${names[Math.floor(Math.random() * names.length)]}</strong>
+        <strong>${randomName()}</strong>
         <small>Telah ditarik ke DANA</small>
       </div>
       <div class="live-amount">
         <span class="amount">${randomAmount()}</span>
-        <small>${times[Math.floor(Math.random() * times.length)]}</small>
+        <small>${randomTime()}</small>
       </div>
     `;
-
     track.prepend(item);
-
     if (track.children.length > 6) {
-      track.removeChild(track.lastChild);
+      track.lastElementChild.remove();
     }
   }
 
@@ -90,46 +82,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================
-   CONFETTI LOTTIE
+   CEK SALDO
 ===================== */
-function playConfetti() {
-  const container = document.getElementById("confetti-lottie");
-  container.innerHTML = "";
-
-  lottie.loadAnimation({
-    container,
-    renderer: "svg",
-    loop: false,
-    autoplay: true,
-    path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
-  });
+function goCek() {
+  window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");
 }
 
-// BLOK ESC AGAR MODAL TIDAK BISA DITUTUP
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    e.preventDefault();
-    return false;
-  }
-});
-
-
+/* =====================
+   LOTTIE SUCCESS
+===================== */
 function playSuccessCheck() {
   const el = document.getElementById("successLottie");
   if (!el) return;
 
   el.innerHTML = "";
-
   lottie.loadAnimation({
     container: el,
     renderer: "svg",
     loop: false,
     autoplay: true,
     path: "https://assets5.lottiefiles.com/packages/lf20_xlkxtmul.json"
-    // ✔️ clean check success animation
   });
 }
-
-
-
-
