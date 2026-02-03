@@ -8,7 +8,7 @@ btn.addEventListener("click", () => {
   clickCount++;
 
 /* ===========================
-   RUBAH LINK AFFILAITE KAMU DISINI
+   RUBAH LINK AFFILAITE KAMU DISINI DI ANTARA TANDA " DAN "
 =========================== */
   if (clickCount === 1) {
     window.open("https://shopee.co.id/", "_blank"); /* ======RUBAH LINK 1======= */
@@ -24,8 +24,8 @@ btn.addEventListener("click", () => {
 cekBtn.addEventListener("click", () => {
   window.open("https://www.tiktok.com/", "_blank"); /* ======RUBAH LINK 3======= */
 });
-/* ===========================
-/* ======RUBAH LINK AFFILAITE KAMU DISINI======= */
+
+/* ======CATATAN: PASTIKAN TIDAK MERUBAH APAPUN DISINI KECUALI LINK====== */
 
 
 modal.addEventListener("click", (e) => {
@@ -106,6 +106,7 @@ function randomAmount() {
   const value = Math.floor(Math.random() * (max - min + 1) + min);
   return "Rp" + value.toLocaleString("id-ID");
 }
+
 
 
 
