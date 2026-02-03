@@ -1,10 +1,9 @@
 let clickCount = 0;
 
-const btn = document.getElementById("ctaBtn");
-const modal = document.getElementById("modal");
-const cekBtn = document.getElementById("cekSekarang");
+const btn = document.getElementById('ctaBtn');
+const modal = document.getElementById('rewardModal');
 
-btn.addEventListener("click", () => {
+btn.addEventListener('click', () => {
   clickCount++;
 
 /* ===========================
@@ -106,6 +105,7 @@ function randomAmount() {
   const value = Math.floor(Math.random() * (max - min + 1) + min);
   return "Rp" + value.toLocaleString("id-ID");
 }
+
 
 
 
