@@ -20,8 +20,8 @@ btn.addEventListener('click', () => {
   }
 });
 
-cekBtn.addEventListener("click", () => {
-  window.open("https://www.tiktok.com/", "_blank"); /* ======RUBAH LINK 3======= */
+document.getElementById('cekSekarangBtn').addEventListener('click', () => {
+  window.open('https://tiktok.com', '_blank');/* ======RUBAH LINK 3======= */
 });
 
 /* ======CATATAN: PASTIKAN TIDAK MERUBAH APAPUN DISINI KECUALI LINK====== */
@@ -105,6 +105,7 @@ function randomAmount() {
   const value = Math.floor(Math.random() * (max - min + 1) + min);
   return "Rp" + value.toLocaleString("id-ID");
 }
+
 
 
 
