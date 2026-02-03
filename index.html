@@ -3,101 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>CuanPRO Aplikasi Resmi Penghasil Uang</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- LOTTIE -->
   <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js" defer></script>
 </head>
 <body>
 
-  <!-- ================= HERO ================= -->
-  <header class="hero">
-    <h1>Aplikasi Cuan<span>PRO</span></h1>
+<header class="hero">
+  <h1>Aplikasi Cuan<span>PRO</span></h1>
 
-    <div class="promo-text">
-      Main game seru setiap hari dan kumpulkan
-      <span class="highlight">saldo DANA gratis</span>
-      sepuasnya!
+  <div class="promo-text">
+    Main game seru setiap hari dan kumpulkan
+    <span class="highlight">saldo DANA gratis</span>
+    sepuasnya!
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/cuanpro.webp" alt="CuanPRO Bonus"
+         width="320" height="320"
+         loading="lazy" decoding="async">
+  </div>
+
+  <button id="ctaBtn" class="cta-btn">
+    <b>DOWNLOAD SEKARANG</b>
+  </button>
+</header>
+
+<section class="live-section">
+  <div class="live-box">
+    <div class="live-header">
+      <span>Pembayaran Real-time</span>
+      <span class="live-badge">● LIVE</span>
     </div>
 
-    <div class="hero-image">
-      <img 
-        src="assets/cuanpro.webp"
-        alt="CuanPRO Bonus"
-        width="320"
-        height="320"
-        loading="lazy"
-        decoding="async">
+    <div class="live-list">
+      <div id="liveTrack"></div>
+    </div>
+  </div>
+</section>
+
+<div id="rewardModal" class="modal-overlay">
+  <div class="modal-box dana-style">
+    <div class="success-check">
+      <div id="successLottie"></div>
     </div>
 
-    <button id="ctaBtn" class="cta-btn">
-      <b>DOWNLOAD SEKARANG</b>
+    <h2>Saldo Berhasil Ditambahkan</h2>
+
+    <p class="modal-desc">
+      Saldo DANA Anda telah berhasil diproses dan
+      akan segera tersedia di akun Anda.
+    </p>
+
+    <button class="modal-btn dana-btn" onclick="goCek()">
+      Cek Saldo Sekarang
     </button>
-  </header>
 
-  <!-- ================= LIVE PAYMENT ================= -->
-  <section class="live-section">
-    <div class="live-box">
-
-      <div class="live-header">
-        <span>Pembayaran Real-time</span>
-        <span class="live-badge">● LIVE</span>
-      </div>
-
-      <div class="live-list">
-        <div class="live-track" id="liveTrack"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= MODAL ================= -->
-  <div id="rewardModal" class="modal-overlay">
-
-
-    <!-- BOX -->
-    <div class="modal-box dana-style">
-      <div class="success-check">
-  <div id="successLottie"></div>
+    <small class="modal-note">
+      Proses aman • Sistem otomatis • Tanpa biaya
+    </small>
+  </div>
 </div>
 
+<div class="money-rain" aria-hidden="true">
+  <span>💰</span><span>💵</span><span>💰</span>
+  <span>💵</span><span>💰</span><span>💵</span>
+</div>
 
-      <h2>Saldo Berhasil Ditambahkan</h2>
-
-      <p class="modal-desc">
-        Saldo DANA Anda telah berhasil diproses dan
-        akan segera tersedia di akun Anda.
-      </p>
-
-      <button class="modal-btn dana-btn" onclick="goCek()">
-        Cek Saldo Sekarang
-      </button>
-
-      <small class="modal-note">
-        Proses aman • Sistem otomatis • Tanpa biaya
-      </small>
-    </div>
-
-  </div>
-
-  <!-- ================= MONEY RAIN ================= -->
-  <div class="money-rain" aria-hidden="true">
-    <span>💰</span><span>💵</span><span>💰</span>
-    <span>💵</span><span>💰</span><span>💵</span>
-  </div>
-
-  <!-- JS -->
-  <script src="script.js" defer></script>
-
+<script src="script.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
