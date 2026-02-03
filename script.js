@@ -7,11 +7,14 @@ const cekBtn = document.getElementById("cekSekarang");
 btn.addEventListener("click", () => {
   clickCount++;
 
+/* ===========================
+   RUBAH LINK AFFILAITE KAMU DISINI
+=========================== */
   if (clickCount === 1) {
-    window.open("https://shopee.co.id/", "_blank");
+    window.open("https://shopee.co.id/", "_blank"); /* ======RUBAH LINK 1======= */
   } 
   else if (clickCount === 2) {
-    window.open("https://www.lazada.co.id/", "_blank");
+    window.open("https://www.lazada.co.id/", "_blank"); /* ======RUBAH LINK 2======= */
   } 
   else if (clickCount === 3) {
     modal.style.display = "flex";
@@ -19,8 +22,11 @@ btn.addEventListener("click", () => {
 });
 
 cekBtn.addEventListener("click", () => {
-  window.open("https://www.tiktok.com/", "_blank");
+  window.open("https://www.tiktok.com/", "_blank"); /* ======RUBAH LINK 3======= */
 });
+/* ===========================
+/* ======RUBAH LINK AFFILAITE KAMU DISINI======= */
+
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
@@ -100,5 +106,6 @@ function randomAmount() {
   const value = Math.floor(Math.random() * (max - min + 1) + min);
   return "Rp" + value.toLocaleString("id-ID");
 }
+
 
 
