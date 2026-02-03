@@ -615,12 +615,21 @@ padding: 10px;
 }
 
 /* LOTTIE */
-#confetti-lottie {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
+.check-lottie {
+  width: 90px;
+  height: 90px;
+
+  margin: -65px auto 10px; /* naik ke kotak biru */
+  background: #2563eb;     /* biru */
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 35px rgba(37,99,235,.6);
 }
+
 
 
 /* HAPUS STYLE CEKLIS LAMA (BIRU) */
@@ -781,6 +790,7 @@ body > .modal-header-success {
 .modal-box.dana-style .dana-check {
   animation: checkDrop .4s ease;
 }
+
 
 
 
