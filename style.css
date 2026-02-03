@@ -640,6 +640,47 @@ padding: 10px;
   display: none !important;
 }
 
+/* HEADER HIJAU ATAS */
+.modal-header-success {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: calc(100% - 40px);
+  height: 38px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: slideDown .5s ease;
+}
+
+/* ANIMASI MASUK */
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* ICON CEKLIS */
+.modal-header-success svg {
+  animation: checkPop 0.6s ease;
+}
+
+/* JARAK KONTEN AGAR TIDAK TERTINDIH */
+.modal-box.dana-style {
+  padding-top: 70px !important;
+}
+
 
 
 
