@@ -572,6 +572,13 @@ padding: 10px;
 }
 
 
+#confetti-lottie {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
 
 
 
