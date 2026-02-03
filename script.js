@@ -12,10 +12,8 @@ btn.addEventListener("click", () => {
   if (clickCount === 1) {
     window.open("https://shopee.co.id/", "_blank");
   } 
+  
   else if (clickCount === 2) {
-    window.open("https://www.lazada.co.id/", "_blank");
-  } 
-  else if (clickCount === 3) {
   modal.style.display = "flex";
   generateConfetti();
 }
@@ -104,20 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createLiveItem, 2800);
 });
 
-const confettiBox = document.querySelector(".confetti");
-
-function generateConfetti() {
-  confettiBox.innerHTML = "";
-  for (let i = 0; i < 20; i++) {
-    const span = document.createElement("span");
-    span.style.left = Math.random() * 100 + "%";
-    span.style.animationDuration = (2 + Math.random() * 2) + "s";
-    span.style.animationDelay = Math.random() + "s";
-    confettiBox.appendChild(span);
-  }
-}
-
-
 
 
 
@@ -132,7 +116,5 @@ function playConfetti() {
     autoplay: true,
     path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
   });
-}
-modal.style.display = "flex";
-playConfetti();
+
 
