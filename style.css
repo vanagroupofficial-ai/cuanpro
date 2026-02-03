@@ -508,13 +508,6 @@ padding: 10px;
   }
 }
 
-#confetti-lottie {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-}
-
 
 
 /* ================= DANA STYLE MODAL ================= */
@@ -628,6 +621,8 @@ padding: 10px;
   pointer-events: none;
   z-index: 2;
 }
+
+
 /* HAPUS STYLE CEKLIS LAMA (BIRU) */
 .modal-box.dana-style .dana-check {
   background: #22c55e !important;
@@ -786,6 +781,7 @@ body > .modal-header-success {
 .modal-box.dana-style .dana-check {
   animation: checkDrop .4s ease;
 }
+
 
 
 
