@@ -693,6 +693,43 @@ body > .top-success-bar {
   display: none !important;
 }
 
+/* HEADER HIJAU KECIL DI MODAL */
+.modal-header-success {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 48px);
+  height: 32px;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: headerSlide .4s ease;
+}
+
+/* ANIMASI HALUS */
+@keyframes headerSlide {
+  from {
+    transform: translate(-50%, -12px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* KASIH JARAK ISI MODAL */
+.modal-box.dana-style {
+  padding-top: 64px !important;
+}
+
 
 
 
