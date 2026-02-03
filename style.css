@@ -10,6 +10,53 @@ body {
   color: #fff;
   text-align: center;
 }
+/* TESTIMONI BOX */
+.testi-box {
+  margin: 20px auto 40px;
+  width: 90%;
+  max-width: 350px;
+  height: 180px; /* INI AREA KOTAK MERAH */
+  overflow: hidden;
+  border-radius: 15px;
+  background: #f5f5f5;
+  padding: 10px;
+}
+
+/* TRACK SCROLL KE ATAS */
+.testi-track {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* GAP ANTAR TESTIMONI */
+  animation: scrollUp 10s linear infinite;
+}
+
+/* CARD TESTIMONI */
+.testi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+/* ICON USER */
+.user-icon {
+  font-size: 1.5rem;
+}
+
+/* ANIMASI SCROLL KE ATAS */
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
 .hero-image img {
   filter: drop-shadow(0 10px 25px rgba(255,215,0,0.6));
 }
@@ -124,4 +171,5 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
 
