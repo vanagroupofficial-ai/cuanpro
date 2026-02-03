@@ -634,6 +634,12 @@ padding: 10px;
 .modal-box.dana-style svg {
   display: block;
 }
+/* JIKA ADA ICON CHECK LAIN, SEMBUNYIKAN */
+.modal-box.dana-style .icon-check,
+.modal-box.dana-style .check-circle {
+  display: none !important;
+}
+
 
 
 
