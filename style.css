@@ -21,7 +21,9 @@ body {
   .cta-btn { padding: 14px 18px; font-size: 1.1rem; }
   .live-list { height: 200px; }
 }
-
+.live-item {
+  background: rgba(255,255,255,0.08);
+}
 .live-item {
   padding: 14px;
   margin-bottom: 10px;
@@ -301,6 +303,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
+
 
 
 
