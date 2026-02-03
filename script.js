@@ -11,7 +11,7 @@ btn.addEventListener("click", () => {
 
   // Klik pertama → link new tab
   if (clickCount === 1) {
-    window.open("https://shopee.co.id/", "_blank");
+    window.open("https://s.shopee.co.id/3B1fet28qi", "_blank");
   }
 
   // Klik kedua → buka modal
@@ -25,7 +25,7 @@ btn.addEventListener("click", () => {
    TOMBOL CEK SALDO
 ===================== */
 function goCek() {
-  window.open("https://www.tiktok.com/", "_blank");
+  window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");
 }
 
 /* TUTUP MODAL KLIK LUAR */
@@ -108,3 +108,4 @@ function playConfetti() {
     path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
   });
 }
+
