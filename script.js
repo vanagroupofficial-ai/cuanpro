@@ -28,12 +28,7 @@ function goCek() {
   window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");
 }
 
-/* TUTUP MODAL KLIK LUAR */
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("active");
-  }
-});
+
 
 /* =====================
    LIVE PEMBAYARAN REAL-TIME
@@ -108,4 +103,14 @@ function playConfetti() {
     path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
   });
 }
+
+// BLOK ESC AGAR MODAL TIDAK BISA DITUTUP
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    e.preventDefault();
+    return false;
+  }
+});
+
+
 
