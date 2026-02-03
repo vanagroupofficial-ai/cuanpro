@@ -125,7 +125,7 @@ body {
 .hero-image img {
   width: 90%;
   max-width: 480px;
-  margin-bottom: 30px;
+      margin-top: 20px;
   animation: floatPulse 3.5s ease-in-out infinite;
 }
 
@@ -523,6 +523,7 @@ padding: 10px;
     text-shadow: 0 0 12px rgba(255, 213, 79, 0.9);
   }
 }
+
 
 
 
