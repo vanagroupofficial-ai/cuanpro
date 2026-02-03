@@ -120,4 +120,12 @@ function generateConfetti() {
 
 
 
+lottie.loadAnimation({
+  container: document.getElementById("confetti-lottie"),
+  renderer: "svg",
+  loop: false,
+  autoplay: true,
+  path: "https://assets9.lottiefiles.com/packages/lf20_obhph3sh.json"
+});
+
 
