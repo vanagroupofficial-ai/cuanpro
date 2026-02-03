@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CuanPRO – Aplikasi Penghasil Uang</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
 
-  <!-- LOTTIE -->
-  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
-
-  <link rel="stylesheet" href="style.css" />
+  <title>CuanPRO Aplikasi Resmi Penghasil Uang Terbaru</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BACKGROUND LOTTIE -->
-<div id="bg-lottie"></div>
-
 <header class="hero">
-  <h1>Cuan<span>PRO</span></h1>
-  <p class="promo-text">
-    Main game seru setiap hari dan kumpulkan
-    <span class="highlight">saldo DANA gratis</span>!
-  </p>
+  <h1>Aplikasi Cuan<span>PRO</span></h1>
+<div class="promo-text">
+  Main game seru setiap hari dan kumpulkan
+  <span class="highlight">saldo DANA gratis</span>
+  sepuasnya!
+</div>
+<div class="hero-image">
+  <img src="assets/vanapro.gif" alt="CuanPRO Bonus">
+</div>
 
-  <button id="ctaBtn" class="cta-btn">DOWNLOAD SEKARANG</button>
+  <button id="ctaBtn" class="cta-btn"><b>DOWNLOAD SEKARANG</b></button>
 </header>
 
 <section class="live-section">
   <div class="live-box">
+
     <div class="live-header">
       <span>Pembayaran Real-time</span>
       <span class="live-badge">● LIVE</span>
     </div>
-    <div class="live-list">
-      <div class="live-track" id="liveTrack"></div>
+
+<div class="live-list">
+  <div class="live-track" id="liveTrack"></div>
+</div>
+      </div>
     </div>
+
   </div>
 </section>
 
+
+
+
 <!-- MODAL -->
+  <div id="confetti-lottie"></div>
 <div class="modal-overlay" id="rewardModal">
   <div class="modal-box">
 
-    <!-- CONFETTI MODAL -->
-    <div id="confetti-lottie"></div>
+    <!-- CONFETTI -->
+    <div class="confetti"></div>
+
+    <!-- CELEBRATE ICON -->
+    <div class="modal-celebrate"></div>
 
     <h2>🎉 SELAMAT!</h2>
     <p>SALDO DANA BERHASIL<br><strong>DITAMBAHKAN</strong></p>
 
-    <button class="modal-btn" onclick="goCek()">CEK SEKARANG</button>
+    <button class="modal-btn" onclick="goCek()">CEK SEKARANG!</button>
 
   </div>
 </div>
 
-<script src="script.js"></script>
+  <script src="./script.js" defer></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
