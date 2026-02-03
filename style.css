@@ -10,6 +10,16 @@ body {
   color: #fff;
   text-align: center;
 }
+
+.testi-card {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* TESTIMONI BOX */
 .testi-box {
   margin: 20px auto 40px;
@@ -171,5 +181,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
 
 
