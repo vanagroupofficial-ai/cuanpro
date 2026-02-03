@@ -16,7 +16,7 @@ btn.addEventListener("click", () => {
     window.open("https://www.lazada.co.id/", "_blank");
   } 
   else if (clickCount === 3) {
-    modal.classList.add("active");
+    modal.style.display = "flex";
   }
 });
 
@@ -30,7 +30,7 @@ function goCek() {
 /* TUTUP MODAL JIKA KLIK LUAR */
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.classList.remove("active");
+   modal.style.display = "none";
   }
 });
 
@@ -101,3 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
   /* UPDATE REAL-TIME */
   setInterval(createLiveItem, 2800);
 });
+
