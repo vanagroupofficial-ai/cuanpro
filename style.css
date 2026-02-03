@@ -474,7 +474,7 @@ body {
 }
 
 .promo-text {
-  max-width: 70%;
+  max-width: 85%;
   margin: 5px 0px;
 padding: 10px;
   border-radius: 16px;
@@ -484,7 +484,7 @@ padding: 10px;
   -webkit-backdrop-filter: blur(10px);
 
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
 
@@ -523,6 +523,7 @@ padding: 10px;
     text-shadow: 0 0 12px rgba(255, 213, 79, 0.9);
   }
 }
+
 
 
 
