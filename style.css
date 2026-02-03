@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, #4facfe, #00f2fe);
+  background: radial-gradient(circle at top, #1f2937, #020617);
   color: #fff;
   text-align: center;
 }
@@ -180,6 +180,110 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+/* LIVE SECTION */
+.live-section {
+  padding: 25px 0 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.live-box {
+  width: 90%;
+  max-width: 380px;
+  background: rgba(30,41,59,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+.live-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.live-badge {
+  color: #ff5f5f;
+  font-size: 0.8rem;
+  background: rgba(255,95,95,0.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* LIST */
+.live-list {
+  height: 230px;
+  overflow: hidden;
+}
+
+/* TRACK SCROLL */
+.live-track {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: liveScroll 14s linear infinite;
+}
+
+/* ITEM */
+.live-item {
+  display: flex;
+  align-items: center;
+  background: rgba(15,23,42,0.9);
+  border-radius: 14px;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* AVATAR */
+.live-item img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
+/* INFO */
+.live-info {
+  flex: 1;
+  text-align: left;
+}
+
+.live-info strong {
+  font-size: 0.9rem;
+}
+
+.live-info small {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+/* AMOUNT */
+.live-amount {
+  text-align: right;
+}
+
+.amount {
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.live-amount small {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+/* SCROLL UP */
+@keyframes liveScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
 }
 
 
