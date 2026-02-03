@@ -22,6 +22,10 @@ body {
   .live-list { height: 200px; }
 }
 
+.live-item {
+  padding: 14px;
+  margin-bottom: 10px;
+}
 
 .testi-card {
   animation: fadeIn 0.8s ease;
@@ -297,6 +301,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
+
 
 
 
