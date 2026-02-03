@@ -1,43 +1,123 @@
-gsap.registerPlugin(ScrollTrigger);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-/* TEXT REVEAL PER HURUF */
-document.querySelectorAll(".reveal-text").forEach(text => {
-  const letters = text.innerText.split("");
-  text.innerHTML = letters.map(l => `<span>${l}</span>`).join("");
-  gsap.from(text.querySelectorAll("span"), {
-    opacity: 0,
-    y: 30,
-    stagger: 0.04
-  });
-});
+body {
+  background: linear-gradient(180deg, #4facfe, #00f2fe);
+  color: #fff;
+  text-align: center;
+}
 
-/* AUTO SWITCH MOCKUP */
-const screens = ["Dashboard", "Statistik", "Penarikan", "Profit"];
-let i = 0;
-setInterval(() => {
-  document.getElementById("mockup-screen").innerText = screens[i++ % screens.length];
-}, 2000);
+.hero {
+  padding: 30px 15px;
+}
 
-/* COUNTER */
-document.querySelectorAll("[data-count]").forEach(el => {
-  gsap.to(el, {
-    innerText: el.dataset.count,
-    duration: 2,
-    snap: { innerText: 1 },
-    scrollTrigger: {
-      trigger: el,
-      start: "top 80%"
-    }
-  });
-});
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
 
-/* STORY SCROLL */
-gsap.from(".feature-card", {
-  opacity: 0,
-  y: 40,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: ".features",
-    start: "top 80%"
-  }
-});
+.hero h1 span {
+  color: #ffd700;
+}
+
+.hero-image img {
+  width: 80%;
+  max-width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: #ffb703;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,183,3,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(255,183,3,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,183,3,0); }
+}
+
+.testimoni {
+  background: #fff;
+  color: #333;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+.testimoni h2 {
+  margin-bottom: 15px;
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.card {
+  min-width: 250px;
+  margin: 0 10px;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 320px;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
