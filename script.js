@@ -32,57 +32,59 @@ modal.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
-const names = [
-  "Andi***", "Budi***", "Citra***", "Deni***", "Rizky***",
-  "Ayu***", "Fajar***", "Nina***", "Dimas***", "Putri***",
-  "Rama***", "Salsa***", "Yoga***", "Tika***", "Bagus***"
-];
+document.addEventListener("DOMContentLoaded", () => {
 
-// nominal 50rb – 500rb
-function randomAmount() {
-  const min = 50000;
-  const max = 500000;
-  const value = Math.floor(Math.random() * (max - min + 1) + min);
-  return "Rp" + value.toLocaleString("id-ID");
-}
+  const track = document.getElementById("liveTrack");
+  if (!track) {
+    console.error("liveTrack tidak ditemukan");
+    return;
+  }
 
-const times = [
-  "Baru saja",
-  "1 Menit lalu",
-  "2 Menit lalu",
-  "3 Menit lalu",
-  "5 Menit lalu",
-  "8 Menit lalu"
-];
+  const names = ["Budi***", "Andi***", "Citra***", "Deni***", "Rina***"];
+  const times = ["Baru saja", "1 Menit lalu", "3 Menit lalu", "5 Menit lalu"];
 
-const track = document.getElementById("liveTrack");
+  function randomAmount() {
+    const amount = Math.floor(Math.random() * (500000 - 50000) + 50000);
+    return "Rp" + amount.toLocaleString("id-ID");
+  }
 
-function randomAvatar() {
-  const id = Math.floor(Math.random() * 70) + 1;
-  return `https://i.pravatar.cc/150?img=${id}`;
-}
+  function randomAvatar() {
+    const id = Math.floor(Math.random() * 70) + 1;
+    return `https://i.pravatar.cc/150?img=${id}`;
+  }
 
-function randomItem(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
+  function createLiveItem() {
+    const item = document.createElement("div");
+    item.className = "live-item";
 
-function createLiveItem() {
-  const item = document.createElement("div");
-  item.className = "live-item";
+    item.innerHTML = `
+      <img src="${randomAvatar()}" alt="user">
+      <div class="live-info">
+        <strong>${names[Math.floor(Math.random() * names.length)]}</strong>
+        <small>Telah ditarik ke DANA</small>
+      </div>
+      <div class="live-amount">
+        <span class="amount">${randomAmount()}</span>
+        <small>${times[Math.floor(Math.random() * times.length)]}</small>
+      </div>
+    `;
 
-  item.innerHTML = `
-    <img src="${randomAvatar()}" loading="lazy">
-    <div class="live-info">
-      <strong>${randomItem(names)}</strong>
-      <small>Telah ditarik ke DANA</small>
-    </div>
-    <div class="live-amount">
-      <span class="amount">${randomAmount()}</span>
-      <small>${randomItem(times)}</small>
-    </div>
-  `;
+    track.prepend(item);
 
-  track.appendChild(item);
+    if (track.children.length > 6) {
+      track.removeChild(track.lastChild);
+    }
+  }
+
+  // pertama kali isi
+  for (let i = 0; i < 3; i++) {
+    createLiveItem();
+  }
+
+  // realtime
+  setInterval(createLiveItem, 3000);
+
+});
 
   // batasi item agar tidak berat
   if (track.children.length > 12) {
@@ -105,6 +107,7 @@ function randomAmount() {
   const value = Math.floor(Math.random() * (max - min + 1) + min);
   return "Rp" + value.toLocaleString("id-ID");
 }
+
 
 
 
