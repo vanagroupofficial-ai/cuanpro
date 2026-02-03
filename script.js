@@ -27,7 +27,7 @@ function goCek() {
   window.open("https://www.tiktok.com/", "_blank");
 }
 
-/* TUTUP MODAL JIKA KLIK AREA LUAR */
+/* TUTUP MODAL JIKA KLIK LUAR */
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("active");
@@ -35,16 +35,35 @@ modal.addEventListener("click", (e) => {
 });
 
 /* =====================
-   LIVE PEMBAYARAN REALTIME
+   LIVE PEMBAYARAN REAL-TIME
 ===================== */
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("liveTrack");
 
-  const names = ["Budi***", "Andi***", "Citra***", "Deni***", "Rina***"];
-  const times = ["Baru saja", "1 Menit lalu", "3 Menit lalu", "5 Menit lalu"];
+  /* ===== VARIAN USER LEBIH BANYAK ===== */
+  const names = [
+    "Budi***","Andi***","Rina***","Siti***","Dewi***","Ayu***","Putri***",
+    "Agus***","Rizki***","Fajar***","Yudi***","Hendra***","Wahyu***",
+    "Dimas***","Bayu***","Rendi***","Farhan***","Ilham***","Nanda***",
+    "Indra***","Arif***","Doni***","Rio***","Kevin***","Alif***"
+  ];
+
+  /* ===== VARIAN WAKTU ===== */
+  const times = [
+    "Baru saja",
+    "30 Detik lalu",
+    "1 Menit lalu",
+    "2 Menit lalu",
+    "3 Menit lalu",
+    "5 Menit lalu",
+    "Beberapa detik lalu"
+  ];
 
   function randomAmount() {
-    const amount = Math.floor(Math.random() * (500000 - 50000) + 50000);
+    const chanceBig = Math.random() > 0.7;
+    const min = chanceBig ? 200000 : 50000;
+    const max = chanceBig ? 650000 : 180000;
+    const amount = Math.floor(Math.random() * (max - min + 1) + min);
     return "Rp" + amount.toLocaleString("id-ID");
   }
 
@@ -76,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  for (let i = 0; i < 3; i++) createLiveItem();
-  setInterval(createLiveItem, 3000);
+  /* ISI AWAL */
+  for (let i = 0; i < 4; i++) createLiveItem();
+
+  /* UPDATE REAL-TIME */
+  setInterval(createLiveItem, 2800);
 });
