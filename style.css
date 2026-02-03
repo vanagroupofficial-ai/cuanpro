@@ -735,7 +735,7 @@ body > .top-success-bar {
 
 /* KASIH JARAK ISI MODAL */
 .modal-box.dana-style {
-  padding-top: 64px !important;
+  padding-top: 10px !important;
 }
 
 
@@ -792,12 +792,12 @@ body > .modal-header-success {
 }
 
 
-/* CEKLIS BULAT SUCCESS */
+/* CEKLIS SUCCESS BESAR */
 .success-check {
-  width: 86px;
-  height: 86px;
+  width: 120px;
+  height: 120px;
 
-  margin: -56px auto 14px; /* naik ke atas modal */
+  margin: -80px auto 20px; /* naik & lebih dominan */
   border-radius: 50%;
 
   background: #22c55e;
@@ -806,10 +806,13 @@ body > .modal-header-success {
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 18px 40px rgba(34,197,94,.55);
-  animation: successPop .45s ease;
-}
+  box-shadow: 
+    0 0 0 10px rgba(34,197,94,0.15),
+    0 25px 60px rgba(34,197,94,.65);
 
+  animation: successPop .5s ease;
+  z-index: 10;
+}
 /* ANIMASI POP */
 @keyframes successPop {
   from {
@@ -822,12 +825,20 @@ body > .modal-header-success {
   }
 }
 
-/* AREA LOTTIE */
+/* AREA LOTTIE CEKLIS */
 #successLottie {
-  width: 48px;
-  height: 48px;
+  width: 70px;
+  height: 70px;
 }
 
+@keyframes greenGlow {
+  0% { box-shadow: 0 0 0 10px rgba(34,197,94,0.15); }
+  100% { box-shadow: 0 0 0 18px rgba(34,197,94,0.25); }
+}
+
+.success-check {
+  animation: successPop .5s ease, greenGlow 1.5s infinite alternate;
+}
 
 
 
