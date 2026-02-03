@@ -16,10 +16,11 @@ btn.addEventListener("click", () => {
 
   // Klik kedua → buka modal
   else if (clickCount === 2) {
-    modal.classList.add("active");
-    playConfetti();
-  }
-});
+  modal.classList.add("active");
+  playConfetti();
+  playCheckLottie();
+}
+
 
 /* =====================
    TOMBOL CEK SALDO
@@ -112,5 +113,21 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+
+function playCheckLottie() {
+  const box = document.getElementById("checkLottie");
+  if (!box) return;
+
+  box.innerHTML = "";
+
+  lottie.loadAnimation({
+    container: box,
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    path: "https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json" 
+    // ✔️ ceklis hijau smooth
+  });
+}
 
 
