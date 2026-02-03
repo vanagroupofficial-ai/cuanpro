@@ -117,4 +117,6 @@ function playConfetti() {
     path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
   });
 
+button.addEventListener('click', ...)
+
 
