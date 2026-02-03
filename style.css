@@ -102,19 +102,29 @@ body {
 
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: titleBlink 2.5s infinite;
 }
 
 .hero h1 span {
   color: #ffd700;
 }
+.hero,
+.live-section {
+  position: relative;
+  z-index: 2;
+}
+
 
 .hero-image img {
-  width: 80%;
-  max-width: 300px;
-  animation: float 3s ease-in-out infinite;
+  width: 85%;
+  max-width: 320px;
+  margin-bottom: 25px;
+  animation: floatPulse 3.5s ease-in-out infinite;
 }
+
 
 @keyframes float {
   0% { transform: translateY(0); }
@@ -346,6 +356,60 @@ body {
 }
 
 
+@keyframes titleBlink {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255,215,0,0.6);
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 0 0 25px rgba(255,215,0,1);
+  }
+}
 
+@keyframes floatPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 20px rgba(0,255,255,0.4));
+  }
+  50% {
+    transform: translateY(-18px) scale(1.05);
+    filter: drop-shadow(0 0 35px rgba(0,255,255,0.8));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 20px rgba(0,255,255,0.4));
+  }
+}
+
+
+.money-rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.money-rain span {
+  position: absolute;
+  top: -10%;
+  font-size: 1.8rem;
+  animation: fall linear infinite;
+  opacity: 0.6;
+}
+
+/* posisi random */
+.money-rain span:nth-child(1) { left: 10%; animation-duration: 6s; }
+.money-rain span:nth-child(2) { left: 25%; animation-duration: 8s; }
+.money-rain span:nth-child(3) { left: 40%; animation-duration: 7s; }
+.money-rain span:nth-child(4) { left: 55%; animation-duration: 9s; }
+.money-rain span:nth-child(5) { left: 70%; animation-duration: 6.5s; }
+.money-rain span:nth-child(6) { left: 85%; animation-duration: 8.5s; }
+
+@keyframes fall {
+  from { transform: translateY(0); }
+  to { transform: translateY(120vh); }
+}
 
 
