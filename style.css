@@ -16,6 +16,11 @@ body {
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
 }
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .cta-btn { padding: 14px 18px; font-size: 1.1rem; }
+  .live-list { height: 200px; }
+}
 
 
 .testi-card {
@@ -292,6 +297,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
+
 
 
 
