@@ -681,6 +681,17 @@ padding: 10px;
   padding-top: 70px !important;
 }
 
+/* HAPUS BAR CEKLIS HIJAU DI ATAS LAYAR */
+body > .modal-header-success,
+body > .success-bar,
+body > .top-success-bar {
+  display: none !important;
+}
+
+/* HAPUS CEKLIS BULAT BESAR DI MODAL */
+.modal-box.dana-style .dana-check {
+  display: none !important;
+}
 
 
 
