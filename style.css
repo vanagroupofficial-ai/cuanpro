@@ -508,7 +508,7 @@ padding: 10px;
 #confetti-lottie {
   position: absolute;
   inset: 0;
-  z-index: 5;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -567,6 +567,7 @@ padding: 10px;
   font-size: 11px;
   color: #94a3b8;
 }
+
 
 
 
