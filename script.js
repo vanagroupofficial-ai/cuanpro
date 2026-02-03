@@ -1,84 +1,43 @@
 gsap.registerPlugin(ScrollTrigger);
 
-/* =====================
-   HERO TEXT REVEAL
-===================== */
-gsap.from(".hero-text h1 span", {
-  opacity: 0,
-  y: 40,
-  stagger: 0.15,
-  duration: 0.8,
-  ease: "power3.out"
+/* TEXT REVEAL PER HURUF */
+document.querySelectorAll(".reveal-text").forEach(text => {
+  const letters = text.innerText.split("");
+  text.innerHTML = letters.map(l => `<span>${l}</span>`).join("");
+  gsap.from(text.querySelectorAll("span"), {
+    opacity: 0,
+    y: 30,
+    stagger: 0.04
+  });
 });
 
-gsap.from(".hero-text p", {
-  opacity: 0,
-  y: 30,
-  duration: 0.8,
-  delay: 0.4
+/* AUTO SWITCH MOCKUP */
+const screens = ["Dashboard", "Statistik", "Penarikan", "Profit"];
+let i = 0;
+setInterval(() => {
+  document.getElementById("mockup-screen").innerText = screens[i++ % screens.length];
+}, 2000);
+
+/* COUNTER */
+document.querySelectorAll("[data-count]").forEach(el => {
+  gsap.to(el, {
+    innerText: el.dataset.count,
+    duration: 2,
+    snap: { innerText: 1 },
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%"
+    }
+  });
 });
 
-gsap.from(".hero-text a", {
-  opacity: 0,
-  y: 20,
-  stagger: 0.15,
-  delay: 0.6
-});
-
-/* =====================
-   MOCKUP PARALLAX
-===================== */
-gsap.to(".hero-mockup", {
-  y: -60,
-  scrollTrigger: {
-    trigger: ".hero-mockup",
-    start: "top bottom",
-    scrub: 1.2
-  }
-});
-
-/* =====================
-   FEATURE CARDS POP
-===================== */
+/* STORY SCROLL */
 gsap.from(".feature-card", {
-  scale: 0.85,
   opacity: 0,
   y: 40,
   stagger: 0.2,
   scrollTrigger: {
-    trigger: ".feature-card",
-    start: "top 85%"
-  }
-});
-
-/* =====================
-   CTA DRAMATIC ENTRANCE
-===================== */
-gsap.from("#download h2, #download p, #download a", {
-  opacity: 0,
-  y: 40,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: "#download",
+    trigger: ".features",
     start: "top 80%"
   }
-});
-
-/* =====================
-   STICKY BUTTON SLIDE-UP
-===================== */
-gsap.to("#sticky-download", {
-  y: "-100%",
-  duration: 0.9,
-  ease: "power4.out",
-  delay: 1.2
-});
-
-/* Hide sticky on CTA */
-const sticky = document.getElementById("sticky-download");
-const download = document.getElementById("download");
-
-window.addEventListener("scroll", () => {
-  const pos = download.getBoundingClientRect().top;
-  sticky.style.display = pos < window.innerHeight - 120 ? "none" : "flex";
 });
