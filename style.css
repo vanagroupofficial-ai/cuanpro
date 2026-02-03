@@ -746,6 +746,11 @@ body > .top-success-bar {
   display: flex;
 }
 
+/* HILANGKAN BAR HIJAU GLOBAL DI ATAS */
+body > .modal-header-success {
+  display: none !important;
+}
+
 
 
 
