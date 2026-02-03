@@ -16,8 +16,10 @@ btn.addEventListener("click", () => {
     window.open("https://www.lazada.co.id/", "_blank");
   } 
   else if (clickCount === 3) {
-    modal.style.display = "flex";
-  }
+  modal.style.display = "flex";
+  generateConfetti();
+}
+
 });
 
 /* =====================
@@ -115,10 +117,7 @@ function generateConfetti() {
   }
 }
 
-else if (clickCount === 3) {
-  modal.style.display = "flex";
-  generateConfetti();
-}
+
 
 
 
