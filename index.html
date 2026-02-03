@@ -2,71 +2,49 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CuanPRO</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP -->
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 </head>
+<body>
 
-<body class="bg-slate-950 text-white">
+<header class="hero">
+  <h1>Cuan<span>PRO</span></h1>
 
-<!-- HERO -->
-<section class="hero-section">
-  <h1 class="reveal-text">
-    Raih Cuan Maksimal<br>bersama CuanPRO
-  </h1>
+  <div class="hero-image">
+    <img src="https://i.imgur.com/9QZQZ7E.png" alt="Cuan Animation">
+  </div>
 
-  <p class="hero-desc">
-    Aplikasi pintar untuk meningkatkan penghasilanmu
-    secara real-time dan aman.
-  </p>
+  <button id="ctaBtn" class="cta-btn">Pasang Sekarang</button>
+</header>
 
-  <a href="#download" class="btn-main pulse">
-    Download Sekarang
-  </a>
+<section class="testimoni">
+  <h2>Mereka berhasil mundur</h2>
+  <div class="marquee">
+    <div class="track">
+      <div class="card">Ter**** berhasil menarik <b>Rp10.000</b></div>
+      <div class="card">Ric**** berhasil menarik <b>Rp20.000</b></div>
+      <div class="card">And**** berhasil menarik <b>Rp50.000</b></div>
+      <div class="card">Dew**** berhasil menarik <b>Rp100.000</b></div>
 
-  <!-- MOCKUP -->
-  <div class="mockup-container">
-    <div id="mockup-screen">Dashboard</div>
+      <!-- Duplicate for infinite scroll -->
+      <div class="card">Ter**** berhasil menarik <b>Rp10.000</b></div>
+      <div class="card">Ric**** berhasil menarik <b>Rp20.000</b></div>
+      <div class="card">And**** berhasil menarik <b>Rp50.000</b></div>
+      <div class="card">Dew**** berhasil menarik <b>Rp100.000</b></div>
+    </div>
   </div>
 </section>
 
-<!-- STORY 1 -->
-<section class="story">
-  <h2>Kenapa CuanPRO?</h2>
-  <p>Dirancang untuk kamu yang ingin hasil nyata.</p>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-  <div class="feature-card">📊 Analisis Cerdas</div>
-  <div class="feature-card">⚡ Mudah Digunakan</div>
-  <div class="feature-card">🔒 Aman & Terpercaya</div>
-</section>
-
-<!-- COUNTER -->
-<section class="counter">
-  <div><span data-count="50000">0</span>+ Pengguna</div>
-  <div><span data-count="120">0</span>% Pertumbuhan</div>
-</section>
-
-<!-- CTA -->
-<section id="download" class="cta">
-  <h2>Siap Mulai Menghasilkan Cuan?</h2>
-  <a class="btn-dark">Download Aplikasi</a>
-</section>
-
-<!-- STICKY MOBILE -->
-<div id="sticky" class="sticky">
-  <span>CuanPRO</span>
-  <a href="#download">Download</a>
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3>🎉 SELAMAT!</h3>
+    <p>SALDO DANA BERHASIL DI TAMBAHKAN!!!</p>
+    <button id="cekSekarang">CEK SEKARANG</button>
+  </div>
 </div>
 
-<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
