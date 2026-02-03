@@ -524,6 +524,46 @@ padding: 10px;
   }
 }
 
+/* ================= CONFETTI MODAL ================= */
+.confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.confetti span {
+  position: absolute;
+  top: -10%;
+  width: 10px;
+  height: 18px;
+  opacity: 0.85;
+  animation: confettiFall linear infinite;
+  border-radius: 3px;
+}
+
+/* Warna pita */
+.confetti span:nth-child(3n) {
+  background: #ffd60a;
+}
+.confetti span:nth-child(3n+1) {
+  background: #ff9f1c;
+}
+.confetti span:nth-child(3n+2) {
+  background: #7209b7;
+}
+
+/* Animasi */
+@keyframes confettiFall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(120%) rotate(360deg);
+  }
+}
+
 
 
 
