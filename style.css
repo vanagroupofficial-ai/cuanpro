@@ -440,6 +440,9 @@ body {
   animation: fall linear infinite;
   opacity: 0.6;
 }
+.money-rain span {
+  filter: blur(0.2px);
+}
 
 /* posisi random */
 .money-rain span:nth-child(1) { left: 10%; animation-duration: 6s; }
@@ -514,62 +517,87 @@ padding: 10px;
 
 
 
-/* ===== MODAL TRUSTED ===== */
-.modal-box.trusted {
-  background: linear-gradient(180deg, #1e1b4b, #0f172a);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+/* ================= DANA STYLE MODAL ================= */
+
+.modal-box.dana-style {
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 24px;
+  padding: 28px 24px;
+  max-width: 340px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: popUp .45s ease;
 }
 
 /* ICON CEKLIS */
-.modal-icon {
-  width: 54px;
-  height: 54px;
-  margin: 0 auto 12px;
+.dana-check {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
   border-radius: 50%;
-  background: #22c55e;
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-
+  background: #1a73e8;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* TEKS */
-.modal-box.trusted h2 {
-  font-size: 18px;
+/* TITLE */
+.modal-box.dana-style h2 {
+  font-size: 17px;
   font-weight: 700;
+  text-align: center;
   margin-bottom: 8px;
 }
 
-.modal-desc {
+/* DESC */
+.modal-box.dana-style .modal-desc {
   font-size: 14px;
+  color: #475569;
   line-height: 1.5;
-  color: #cbd5f5;
+  text-align: center;
 }
 
-/* BUTTON */
-.trusted-btn {
-  margin-top: 18px;
-  background: #2563eb;
-  animation: none;
+/* BUTTON DANA */
+.dana-btn {
+  margin-top: 20px;
+  background: #1a73e8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 14px;
+  animation: danaPulse 2.6s infinite;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.trusted-btn:hover {
-  background: #1d4ed8;
+.dana-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(26,115,232,.45);
 }
 
-/* CATATAN BAWAH */
+/* ANIMASI HALUS */
+@keyframes danaPulse {
+  0% { box-shadow: 0 0 0 0 rgba(26,115,232,.45); }
+  70% { box-shadow: 0 0 0 16px rgba(26,115,232,0); }
+  100% { box-shadow: 0 0 0 0 rgba(26,115,232,0); }
+}
+
+/* NOTE */
 .modal-note {
   display: block;
   margin-top: 14px;
   font-size: 11px;
-  color: #94a3b8;
+  color: #64748b;
+  text-align: center;
 }
 
-
-
+/* LOTTIE */
+#confetti-lottie {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
 
 
 
