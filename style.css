@@ -6,10 +6,17 @@
 }
 
 body {
-  background: radial-gradient(circle at top, #1f2937, #020617);
-  color: #fff;
-  text-align: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #2a0a4a,
+    #0b0218 60%,
+    #000000
+  );
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 
 .testi-card {
   animation: fadeIn 0.8s ease;
@@ -285,6 +292,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
+
 
 
 
