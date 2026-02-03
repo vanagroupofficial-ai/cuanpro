@@ -4,33 +4,34 @@ const btn = document.getElementById("ctaBtn");
 const modal = document.getElementById("rewardModal");
 
 /* =====================
-   TOMBOL PASANG SEKARANG
+   TOMBOL DOWNLOAD SEKARANG
 ===================== */
 btn.addEventListener("click", () => {
   clickCount++;
 
+  // Klik pertama → link new tab
   if (clickCount === 1) {
     window.open("https://shopee.co.id/", "_blank");
-  } 
-  
-  else if (clickCount === 2) {
-  modal.style.display = "flex";
-  generateConfetti();
-}
+  }
 
+  // Klik kedua → buka modal
+  else if (clickCount === 2) {
+    modal.classList.add("active");
+    playConfetti();
+  }
 });
 
 /* =====================
-   TOMBOL DI MODAL
+   TOMBOL CEK SALDO
 ===================== */
 function goCek() {
   window.open("https://www.tiktok.com/", "_blank");
 }
 
-/* TUTUP MODAL JIKA KLIK LUAR */
+/* TUTUP MODAL KLIK LUAR */
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-   modal.style.display = "none";
+    modal.classList.remove("active");
   }
 });
 
@@ -40,7 +41,8 @@ modal.addEventListener("click", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("liveTrack");
 
-  /* ===== VARIAN USER LEBIH BANYAK ===== */
+  if (!track) return;
+
   const names = [
     "Budi***","Andi***","Rina***","Siti***","Dewi***","Ayu***","Putri***",
     "Agus***","Rizki***","Fajar***","Yudi***","Hendra***","Wahyu***",
@@ -48,28 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "Indra***","Arif***","Doni***","Rio***","Kevin***","Alif***"
   ];
 
-  /* ===== VARIAN WAKTU ===== */
   const times = [
-    "Baru saja",
-    "30 Detik lalu",
-    "1 Menit lalu",
-    "2 Menit lalu",
-    "3 Menit lalu",
-    "5 Menit lalu",
-    "Beberapa detik lalu"
+    "Baru saja","30 Detik lalu","1 Menit lalu",
+    "2 Menit lalu","3 Menit lalu","5 Menit lalu"
   ];
 
   function randomAmount() {
-    const chanceBig = Math.random() > 0.7;
-    const min = chanceBig ? 200000 : 50000;
-    const max = chanceBig ? 650000 : 180000;
-    const amount = Math.floor(Math.random() * (max - min + 1) + min);
-    return "Rp" + amount.toLocaleString("id-ID");
+    const min = 50000;
+    const max = 650000;
+    return "Rp" + Math.floor(Math.random() * (max - min) + min)
+      .toLocaleString("id-ID");
   }
 
   function randomAvatar() {
-    const id = Math.floor(Math.random() * 70) + 1;
-    return `https://i.pravatar.cc/150?img=${id}`;
+    return `https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}`;
   }
 
   function createLiveItem() {
@@ -77,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     item.className = "live-item";
 
     item.innerHTML = `
-      <img src="${randomAvatar()}" alt="user">
+      <img src="${randomAvatar()}">
       <div class="live-info">
         <strong>${names[Math.floor(Math.random() * names.length)]}</strong>
         <small>Telah ditarik ke DANA</small>
@@ -95,16 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ISI AWAL */
   for (let i = 0; i < 4; i++) createLiveItem();
-
-  /* UPDATE REAL-TIME */
-  setInterval(createLiveItem, 2800);
+  setInterval(createLiveItem, 3000);
 });
 
-
-
-
+/* =====================
+   CONFETTI LOTTIE
+===================== */
 function playConfetti() {
   const container = document.getElementById("confetti-lottie");
   container.innerHTML = "";
@@ -116,7 +107,4 @@ function playConfetti() {
     autoplay: true,
     path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
   });
-
-button.addEventListener('click', ...)
-
-
+}
