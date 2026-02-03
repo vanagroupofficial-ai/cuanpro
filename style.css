@@ -514,6 +514,60 @@ padding: 10px;
 
 
 
+/* ===== MODAL TRUSTED ===== */
+.modal-box.trusted {
+  background: linear-gradient(180deg, #1e1b4b, #0f172a);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* ICON CEKLIS */
+.modal-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEKS */
+.modal-box.trusted h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.modal-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cbd5f5;
+}
+
+/* BUTTON */
+.trusted-btn {
+  margin-top: 18px;
+  background: #2563eb;
+  animation: none;
+}
+
+.trusted-btn:hover {
+  background: #1d4ed8;
+}
+
+/* CATATAN BAWAH */
+.modal-note {
+  display: block;
+  margin-top: 14px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
 
 
 
