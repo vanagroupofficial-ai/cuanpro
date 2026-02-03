@@ -10,6 +10,9 @@ body {
   color: #fff;
   text-align: center;
 }
+.hero-image img {
+  filter: drop-shadow(0 10px 25px rgba(255,215,0,0.6));
+}
 
 .hero {
   padding: 30px 15px;
@@ -121,3 +124,4 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
