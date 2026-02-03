@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CuanPRO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="style.css">
+  <title>CuanPRO Aplikasi Resmi Penghasil Uang Terbaru</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Cuan<span>PRO</span></h1>
+<header class="hero">
+  <h1>Aplikasi Cuan<span>PRO</span></h1>
+<div class="promo-text">
+  Main game seru setiap hari dan kumpulkan
+  <span class="highlight">saldo DANA gratis</span>
+  sepuasnya!
+</div>
+<div class="hero-image">
+  <img src="assets/vanapro.gif" alt="CuanPRO Bonus">
+</div>
 
-    <div class="hero-image">
-      <img src="assets/vanapro.gif" alt="CuanPRO">
+  <button id="ctaBtn" class="cta-btn">Pasang Sekarang</button>
+</header>
+
+<section class="live-section">
+  <div class="live-box">
+
+    <div class="live-header">
+      <span>Pembayaran Real-time</span>
+      <span class="live-badge">● LIVE</span>
     </div>
 
-    <button class="cta-btn" id="ctaBtn">Pasang Sekarang</button>
-  </section>
-
-  <section class="live-section">
-    <div class="live-box">
-
-      <div class="live-header">
-        <span>Pembayaran Real-time</span>
-        <span class="live-badge">● LIVE</span>
+<div class="live-list">
+  <div class="live-track" id="liveTrack"></div>
+</div>
       </div>
-
-      <div class="live-list">
-        <div class="live-track" id="liveTrack"></div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- POPUP MODAL -->
-  <div class="modal-overlay" id="rewardModal">
-    <div class="modal-box">
-      <h2>🎉 SELAMAT!</h2>
-      <p>SALDO DANA BERHASIL <br><strong>DITAMBAHKAN</strong></p>
-      <button class="modal-btn" id="cekNowBtn">CEK SEKARANG</button>
-    </div>
   </div>
+</section>
 
-<script src="script.js" defer></script>
+
+
+<!-- MODAL -->
+<div class="modal-overlay" id="rewardModal">
+  <div class="modal-box">
+    <div class="modal-celebrate"></div>
+
+    <h2>🎉 SELAMAT!</h2>
+    <p>SALDO DANA BERHASIL<br><strong>DITAMBAHKAN</strong></p>
+
+    <button class="modal-btn" onclick="goCek()">CEK SEKARANG</button>
+  </div>
+</div>
+
+
+
+  <div class="money-rain">
+  <span>💸</span><span>💰</span><span>💵</span>
+  <span>💸</span><span>💰</span><span>💵</span>
+  <span>💸</span><span>💰</span><span>💵</span>
+</div>
+  <script src="./script.js" defer></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
