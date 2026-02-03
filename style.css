@@ -97,7 +97,7 @@ body {
 .hero {
   min-height: auto;        /* HAPUS 100vh */
   padding-top: 60px;       /* JARAK ATAS */
-  padding-bottom: 20px;    /* JARAK BAWAH */
+  padding-bottom: 2px;    /* JARAK BAWAH */
 
   display: flex;
   flex-direction: column;
@@ -415,6 +415,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(120vh); }
 }
+
 
 
 
