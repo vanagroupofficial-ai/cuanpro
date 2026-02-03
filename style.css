@@ -259,25 +259,6 @@ body {
   100% { box-shadow: 0 0 0 18px rgba(255,214,10,0); }
 }
 
-/* ================= TABURAN UANG ================= */
-.modal-celebrate::before,
-.modal-celebrate::after {
-  content: "💰 💵 💰 💵 💰 💵";
-  position: absolute;
-  inset: -40px;
-  font-size: 22px;
-  animation: rain 2.2s linear infinite;
-  opacity: .85;
-}
-
-.modal-celebrate::after {
-  animation-delay: 1s;
-}
-
-@keyframes rain {
-  from { transform: translateY(-100px); }
-  to { transform: translateY(300px); }
-}
 
 /* LIVE SECTION */
 .live-section {
@@ -524,60 +505,13 @@ padding: 10px;
   }
 }
 
-/* ================= CONFETTI MODAL ================= */
-.confetti {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.confetti span {
-  position: absolute;
-  top: -10%;
-  width: 10px;
-  height: 18px;
-  opacity: 0.85;
-  animation: confettiFall linear infinite;
-  border-radius: 3px;
-}
-
-/* Warna pita */
-.confetti span:nth-child(3n) {
-  background: #ffd60a;
-}
-.confetti span:nth-child(3n+1) {
-  background: #ff9f1c;
-}
-.confetti span:nth-child(3n+2) {
-  background: #7209b7;
-}
-
-/* Animasi */
-@keyframes confettiFall {
-  from {
-    transform: translateY(0) rotate(0deg);
-  }
-  to {
-    transform: translateY(120%) rotate(360deg);
-  }
-}
-
-
-
-/* MATIKAN MONEY RAIN SAAT MODAL AKTIF */
-.modal-overlay[style*="display: flex"] ~ .money-rain {
-  display: none !important;
-}
-
-
 #confetti-lottie {
   position: absolute;
   inset: 0;
   z-index: 5;
   pointer-events: none;
 }
+
 
 
 
