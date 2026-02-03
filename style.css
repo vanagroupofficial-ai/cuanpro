@@ -566,6 +566,11 @@ padding: 10px;
 
 
 
+/* MATIKAN MONEY RAIN SAAT MODAL AKTIF */
+.modal-overlay[style*="display: flex"] ~ .money-rain {
+  display: none !important;
+}
+
 
 
 
