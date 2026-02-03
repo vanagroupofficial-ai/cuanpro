@@ -123,8 +123,8 @@ body {
 
 
 .hero-image img {
-  width: 85%;
-  max-width: 320px;
+  width: 90%;
+  max-width: 480px;
   margin-bottom: 30px;
   animation: floatPulse 3.5s ease-in-out infinite;
 }
@@ -415,6 +415,7 @@ body {
   from { transform: translateY(0); }
   to { transform: translateY(120vh); }
 }
+
 
 
 
