@@ -794,10 +794,10 @@ body > .modal-header-success {
 
 /* CEKLIS SUCCESS BESAR */
 .success-check {
-  width: 120px;
-  height: 120px;
-
-  margin: -80px auto 20px; /* naik & lebih dominan */
+ width: 90px;
+    height: 90px;
+    margin: -60px auto 20px;
+ /* naik & lebih dominan */
   border-radius: 50%;
 
   background: #22c55e;
@@ -839,6 +839,7 @@ body > .modal-header-success {
 .success-check {
   animation: successPop .5s ease, greenGlow 1.5s infinite alternate;
 }
+
 
 
 
