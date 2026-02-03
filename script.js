@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
   else if (clickCount === 2) {
   modal.classList.add("active");
   playConfetti();
-  playCheckLottie();
+  playSuccessCheck();
 }
 
 
@@ -114,20 +114,22 @@ document.addEventListener("keydown", (e) => {
 });
 
 
-function playCheckLottie() {
-  const box = document.getElementById("checkLottie");
-  if (!box) return;
+function playSuccessCheck() {
+  const el = document.getElementById("successLottie");
+  if (!el) return;
 
-  box.innerHTML = "";
+  el.innerHTML = "";
 
   lottie.loadAnimation({
-    container: box,
+    container: el,
     renderer: "svg",
     loop: false,
     autoplay: true,
-    path: "https://assets2.lottiefiles.com/packages/lf20_jbrw3hcz.json" 
-    // ✔️ ceklis hijau smooth
+    path: "https://assets5.lottiefiles.com/packages/lf20_xlkxtmul.json"
+    // ✔️ clean check success animation
   });
 }
+
+
 
 
