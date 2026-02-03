@@ -227,12 +227,22 @@ body {
 }
 
 .live-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #ff5f5f;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   background: rgba(255,95,95,0.15);
   padding: 4px 10px;
   border-radius: 20px;
+  animation: blink 1.2s infinite;
 }
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
 
 /* LIST */
 .live-list {
@@ -305,7 +315,27 @@ body {
 }
 
 
+.testimoni,
+.testi-box,
+.marquee {
+  display: none !important;
+}
 
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(255,95,95,0);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 12px rgba(255,95,95,0.6);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(255,95,95,0);
+  }
+}
 
 
 
