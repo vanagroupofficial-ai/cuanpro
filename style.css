@@ -452,6 +452,21 @@ body {
   }
 }
 
+.promo-text .highlight {
+  color: #ffd54f;
+  font-weight: 700;
+  animation: glow 1.8s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 4px rgba(255, 213, 79, 0.4);
+  }
+  to {
+    text-shadow: 0 0 12px rgba(255, 213, 79, 0.9);
+  }
+}
+
 
 
 
