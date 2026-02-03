@@ -120,12 +120,19 @@ function generateConfetti() {
 
 
 
-lottie.loadAnimation({
-  container: document.getElementById("confetti-lottie"),
-  renderer: "svg",
-  loop: false,
-  autoplay: true,
-  path: "https://assets9.lottiefiles.com/packages/lf20_obhph3sh.json"
-});
 
+function playConfetti() {
+  const container = document.getElementById("confetti-lottie");
+  container.innerHTML = "";
+
+  lottie.loadAnimation({
+    container,
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    path: "https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+  });
+}
+modal.style.display = "flex";
+playConfetti();
 
