@@ -1,92 +1,72 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CuanPRO — Aplikasi Penghasil Cuan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CuanPRO</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 
   <!-- GSAP -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 </head>
 
-<body class="bg-slate-950 text-white overflow-x-hidden">
+<body class="bg-slate-950 text-white">
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    <div class="hero-text">
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-        Raih <span class="text-emerald-400">Cuan Maksimal</span><br />
-        dengan <span class="text-emerald-400">CuanPRO</span>
-      </h1>
-      <p class="mt-6 text-slate-300 text-lg">
-        Aplikasi pintar untuk membantu kamu mengelola dan meningkatkan
-        penghasilan secara efektif.
-      </p>
-      <div class="mt-8 flex gap-4">
-       <a href="#download" class="btn-primary pulse">
+<section class="hero-section">
+  <h1 class="reveal-text">
+    Raih Cuan Maksimal<br>bersama CuanPRO
+  </h1>
 
-        <a href="#fitur" class="btn-secondary">Lihat Fitur</a>
-      </div>
-    </div>
+  <p class="hero-desc">
+    Aplikasi pintar untuk meningkatkan penghasilanmu
+    secara real-time dan aman.
+  </p>
 
-    <div class="hero-mockup flex justify-center">
-      <div class="mockup floating">
-    </div>
+  <a href="#download" class="btn-main pulse">
+    Download Sekarang
+  </a>
+
+  <!-- MOCKUP -->
+  <div class="mockup-container">
+    <div id="mockup-screen">Dashboard</div>
   </div>
 </section>
 
-<!-- FITUR -->
-<section id="fitur" class="py-32 bg-slate-900 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="section-title">Kenapa CuanPRO?</h2>
+<!-- STORY 1 -->
+<section class="story">
+  <h2>Kenapa CuanPRO?</h2>
+  <p>Dirancang untuk kamu yang ingin hasil nyata.</p>
+</section>
 
-    <div class="grid md:grid-cols-3 gap-10 mt-16">
-      <div class="feature-card">
-        <h3>Analisis Cerdas</h3>
-        <p>Pantau keuangan kamu secara real-time.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Mudah Digunakan</h3>
-        <p>Interface simpel dan intuitif.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Aman & Terpercaya</h3>
-        <p>Keamanan data prioritas utama.</p>
-      </div>
-    </div>
-  </div>
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature-card">📊 Analisis Cerdas</div>
+  <div class="feature-card">⚡ Mudah Digunakan</div>
+  <div class="feature-card">🔒 Aman & Terpercaya</div>
+</section>
+
+<!-- COUNTER -->
+<section class="counter">
+  <div><span data-count="50000">0</span>+ Pengguna</div>
+  <div><span data-count="120">0</span>% Pertumbuhan</div>
 </section>
 
 <!-- CTA -->
-<section id="download" class="cta-section">
+<section id="download" class="cta">
   <h2>Siap Mulai Menghasilkan Cuan?</h2>
-  <p>Download CuanPRO sekarang dan mulai perjalanan finansial kamu.</p>
-  <a href="#" class="btn-dark">Download Aplikasi</a>
+  <a class="btn-dark">Download Aplikasi</a>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-10 text-center text-slate-500 text-sm">
-  © 2026 CuanPRO. All rights reserved.
-</footer>
-
-<!-- STICKY DOWNLOAD (MOBILE) -->
-<div id="sticky-download" class="sticky-download md:hidden">
-  <div>
-    <p class="font-semibold text-sm">CuanPRO</p>
-    <p class="text-xs text-slate-400">Mulai hasilkan cuan hari ini</p>
-  </div>
-  <a href="#download" class="btn-primary-sm">Download</a>
+<!-- STICKY MOBILE -->
+<div id="sticky" class="sticky">
+  <span>CuanPRO</span>
+  <a href="#download">Download</a>
 </div>
 
 <script src="main.js"></script>
 </body>
 </html>
-
