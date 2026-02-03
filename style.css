@@ -624,6 +624,17 @@ padding: 10px;
   pointer-events: none;
   z-index: 2;
 }
+/* HAPUS STYLE CEKLIS LAMA (BIRU) */
+.modal-box.dana-style .dana-check {
+  background: #22c55e !important;
+  box-shadow: none;
+}
+
+/* PASTIKAN TIDAK ADA DUPLIKAT */
+.modal-box.dana-style svg {
+  display: block;
+}
+
 
 
 
