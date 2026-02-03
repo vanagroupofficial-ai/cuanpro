@@ -102,3 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(createLiveItem, 2800);
 });
 
+const confettiBox = document.querySelector(".confetti");
+
+function generateConfetti() {
+  confettiBox.innerHTML = "";
+  for (let i = 0; i < 20; i++) {
+    const span = document.createElement("span");
+    span.style.left = Math.random() * 100 + "%";
+    span.style.animationDuration = (2 + Math.random() * 2) + "s";
+    span.style.animationDelay = Math.random() + "s";
+    confettiBox.appendChild(span);
+  }
+}
+
+else if (clickCount === 3) {
+  modal.style.display = "flex";
+  generateConfetti();
+}
+
+
+
