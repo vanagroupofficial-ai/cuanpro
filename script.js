@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clickCount++;
 
       if (clickCount === 1) {
-        window.open("https://s.shopee.co.id/3B1fet28qi", "_blank");
+        window.open("https://s.shopee.co.id/3B1fet28qi", "_blank");  /* ===GANTI # DENGAN LINK DI ANTARA "dan"==== */
       } else {
         modal.classList.add("active");
         playSuccessCheck();
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
    CEK SALDO
 ===================== */
 function goCek() {
-  window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");
+  window.open("https://vt.tiktok.com/ZSaGByLBu/", "_blank");   /* ===GANTI # DENGAN LINK DI ANTARA "dan"==== */
 }
 
 /* =====================
@@ -104,3 +104,4 @@ function playSuccessCheck() {
     path: "https://assets5.lottiefiles.com/packages/lf20_xlkxtmul.json"
   });
 }
+
